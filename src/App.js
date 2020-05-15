@@ -150,4 +150,4 @@ class App extends Component {
   }
 }
 
-export default Appbrain;
+export default App;
