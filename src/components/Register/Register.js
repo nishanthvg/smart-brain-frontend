@@ -22,7 +22,7 @@ class Register extends React.Component {
     }
 
     onSubmitRegister = () => {
-        fetch("http://localhost:3004/register",{
+        fetch("https://protected-island-46906.herokuapp.com/register",{
             method: "post",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -35,9 +35,9 @@ class Register extends React.Component {
             if(user.id) {
                 this.props.loadUser(user) // load the info to front-end - doesn't effect the registeration process 
                 this.props.onRouteChange('home')
-            } else {
-                alert('Tabs cant be left blank')
-            }
+            }//  else {
+            //     alert('Tabs cant be left blank')
+            // }
         })
     }
     

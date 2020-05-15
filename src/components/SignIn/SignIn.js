@@ -18,7 +18,7 @@ class SignIn extends React.Component {
     }
 
     onSubmitSignIn = () => {
-        fetch("http://localhost:3004/signin", {
+        fetch("https://protected-island-46906.herokuapp.com/signin", {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -30,10 +30,10 @@ class SignIn extends React.Component {
             if(user.id ) {
                 this.props.loadUser(user);
                 this.props.onRouteChange('home');
-            } else if(user.email === '' || user.password === ''){
-                alert("tabs cant be left blank")
-            }
-        })
+             } //else if(user.email === '' || user.password === ''){
+            //     alert("tabs cant be left blank")
+            // }
+        }) 
     }
 
     render() {
